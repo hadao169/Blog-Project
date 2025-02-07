@@ -6,7 +6,7 @@
   "scripts": {
     "start": "cross-env NODE_ENV=production node index.js",
     "dev": "cross-env NODE_ENV=development nodemon index.js",
-    "build:ui": "rm -rf dist && cd ./Backend && npm run build && cp -r dist ./Frontend",
+    "build:ui": "rm -rf dist && cd ../Frontend && npm run build && cp -r dist Backtend",
     "deploy:full": "npm run build:ui && git add . && git commit -m uibuild && git push",
     "test": "cross-env NODE_ENV=test node --test",
     "lint": "eslint ."
